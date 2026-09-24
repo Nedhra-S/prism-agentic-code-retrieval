@@ -1,0 +1,17 @@
+# PRISM GenAI Hackathon 3.0
+# Theme 1 - Agentic Code Intelligence
+#
+# Tested successfully with the final retrieval pipeline
+# and official MTEB AppsRetrieval evaluation.
+
+# Core evaluation / embedding stack
+mteb==2.21.6
+sentence-transformers==6.1.0
+torch==2.14.0
+
+# Numerical / retrieval utilities
+numpy==2.5.3
+rank-bm25==0.2.2
+
+# Progress utilities
+tqdm==4.70.1
