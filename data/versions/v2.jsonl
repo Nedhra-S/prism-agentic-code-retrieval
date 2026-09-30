@@ -1,0 +1,8 @@
+{"id": "1", "file_path": "utils.py:1", "text": "def validate_input(s):\n    if not s or not s.strip():\n        raise ValueError('input cannot be empty')\n    return s.strip()"}
+{"id": "2", "file_path": "utils.py:10", "text": "def normalize(s):\n    s = ' '.join(s.lower().split())\n    return s.replace(' ', '_')"}
+{"id": "3", "file_path": "render.py:5", "text": "def render_button(label, color='blue'):\n    return f'<button style=\"background:{color}\">{label}</button>'"}
+{"id": "4", "file_path": "math_ops.py:1", "text": "def add(a, b):\n    return a + b"}
+{"id": "5", "file_path": "math_ops.py:8", "text": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True"}
+{"id": "6", "file_path": "parser.py:20", "text": "def parse_config(path):\n    with open(path) as f:\n        return json.load(f)"}
+{"id": "7", "file_path": "utils.py:25", "text": "def check_prefix(s, prefix):\n    return s.startswith(prefix)"}
+{"id": "8", "file_path": "cache.py:1", "text": "class LRUCache:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.cache = OrderedDict()\n\n    def get(self, key):\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]"}
