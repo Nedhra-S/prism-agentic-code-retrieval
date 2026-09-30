@@ -1,53 +1,48 @@
-# PRISM GenAI Hackathon 3.0 — Agentic Code Intelligence
+# \# PRISM GenAI Hackathon 3.0 — Agentic Code Intelligence
 
-## Problem
+# 
 
-Given a natural-language programming problem and a library of code snippets,
-the system retrieves and ranks the most relevant snippets.
+# \## Problem
 
-This project focuses on retrieval, not code generation.
+# 
 
-## Our Approach
+# Given a natural-language programming problem and a library of code snippets, the system retrieves and ranks the most relevant snippets.
 
-We use a Problem-Focused Multi-View Retrieval approach.
+# 
 
-Each programming query is decomposed into three views:
+# This project focuses on retrieval, not code generation.
 
-- Core — main programming task
-- Input — input requirements and constraints
-- Output — expected result/output
+# 
 
-Each view is encoded separately and combined using:
+# \## Our Approach
 
-Core   = 0.50
-Input  = 0.25
-Output = 0.25
+# 
 
-Final Query Vector =
-0.50 × Core + 0.25 × Input + 0.25 × Output
+# We use a Problem-Focused Multi-View Retrieval approach.
 
-The final vector is used to retrieve and rank code snippets.
+# 
 
-## Model
+# Each programming query is decomposed into three views:
 
-`sentence-transformers/all-MiniLM-L6-v2`
+# 
 
-The system is designed for CPU-oriented execution.
+# \- \*\*Core\*\* — main programming task
 
-## Architecture
+# \- \*\*Input\*\* — input requirements and constraints
 
-```text
-Programming Query
-       ↓
-Query Preprocessing
-       ↓
-Core / Input / Output
-       ↓
-Three Embeddings
-       ↓
-Weighted Fusion
-0.50 / 0.25 / 0.25
-       ↓
-Similarity Retrieval
-       ↓
-Ranked Code Snippets
+# \- \*\*Output\*\* — expected result/output
+
+# 
+
+# Each view is encoded separately and combined using:
+
+# 
+
+# ```text
+
+# Core   = 0.50
+
+# Input  = 0.25
+
+# Output = 0.25
+
